@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tugas 3 1402019061</title>
+</head>
+<body>
+	<h1 id="name" style="display:none"></h1>
+	<script>
+		inputName();
+		function inputName() {
+			var name = prompt("Masukkan Nama Anda");
+			var sapaan = "Selamat datang, "+name;
+			document.getElementById("name").style.display="block";
+			document.getElementById("name").innerHTML = sapaan;
+		}
+	</script>
+	<p> Menghitung volume dan luas permukaan dari silinder, kerucut dan bola.</p>
+	
+		<script language="javascript">
+		function silinder() { 
+		var v=3.14; 
+		var r=parseFloat(document.ffrom.jari.value); 
+		var t=parseFloat(document.ffrom.tinggi.value); 
+		var jumlah=r*r; var jumlah1=jumlah*t; 
+		var jumlah2=jumlah1*v; 
+
+			document.getElementById("hasilsilinder").innerHTML = "Volume: " + jumlah2 + " m^3";
+		} 
+		function kerucut() { 
+		var v1=3.14; 
+		var r1=parseFloat(document.ffrom1.jari1.value); 
+		var t1=parseFloat(document.ffrom1.tinggi1.value); 
+		var jumlahh=r1*r1; 
+		var jumlahh1=jumlahh*t1; 
+		var jumlahh2=0.33333333*jumlahh1*v1; 
+
+			document.getElementById("hasilkerucut").innerHTML = "Volume: " + jumlahh2 + " m^3";
+		} 
+		function luaslingkaran() 
+		{ 
+			var r2 = parseFloat(document.ffrom2.jari2.value);
+		 if(isNaN(r2)){ 
+			r2=0.0;
+		} 
+		var jumlahhh2 = 3.14*r2*r2; 
+		document.getElementById("hasilbola").innerHTML = "Volume: " + jumlahhh2 + " m^3";
+		} 
+				</script>
+		<form name="ffrom">
+			<h1><b>Silinder</b></h1>
+			<p>
+			<label>Masukkan jari-jari silinder (dalam meter)</label>
+			<input type="text"name="jari"placeholder="Masukkan jari-jari"> 
+			</p>
+			<p>
+			<label>Masukkan tinggi silinder (dalam meter)</label>
+			<input type="text"name="tinggi"placeholder="Masukkan tinggi"> 
+			</p>
+			<input type="button" value="Hitung!"onclick="silinder()"> 
+			<input type="reset" value="reset"></form>
+			<h3><b>Hasil Perhitungan</b></h3>
+			<p id = "hasilsilinder"></p>
+		</form>
+		<form name="ffrom1">
+			<h1><b>Kerucut</b></h1>
+			<p>
+			<label>Masukkan jari-jari kerucut (dalam meter)</label>
+			<input type="text"name="jari1"placeholder="Masukkan jari-jari"> 
+			</p>
+			<p>
+			<label>Masukkan tinggi kerucut (dalam meter)</label>
+			<input type="text"name="tinggi1"placeholder="Masukkan tinggi"> 
+			</p>
+			<input type="button" value="Hitung!"onclick="kerucut()"> 
+			<input type="reset" value="reset"></form>
+			<h3><b>Hasil Perhitungan</b></h3>
+			<p id = "hasilkerucut"></p>
+		</form>
+		<form name="ffrom2">
+			<h1><b>Bola</b></h1>
+			<p>
+			<label>Masukkan jari-jari kerucut (dalam meter)</label>
+			<input type="text"name="jari2"placeholder="Masukkan jari-jari"> 
+			</p>
+			<input type="button" value="Hitung!"onclick="luaslingkaran()"> 
+			<input type="reset" value="reset"></form>
+			<h3><b>Hasil Perhitungan</b></h3>
+			<p id = "hasilbola"></p>
+		</form>
+	</body>
+	
+</html>
